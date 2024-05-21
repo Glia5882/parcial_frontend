@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Lista de Celulares</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Marca</th>
+          <th>Serial</th>
+          <th>Fecha de Compra</th>
+          <th>Año de Lanzamiento</th>
+          <th>Precio</th>
+          <th>Sistema Operativo</th>
+          <th>Gama</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let celular of celulares">
+          <td>{{ celular.id }}</td>
+          <td>{{ celular.marca }}</td>
+          <td>{{ celular.serial }}</td>
+          <td>{{ celular.fechaCompra | date:'shortDate' }}</td>
+          <td>{{ celular.aniooLanzamiento | date:'yyyy' }}</td>
+          <td>{{ celular.precio | currency }}</td>
+          <td>{{ celular.sistemaOperativo }}</td>
+          <td>{{ celular.gama }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
